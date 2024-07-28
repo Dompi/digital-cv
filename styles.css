@@ -1,3 +1,12 @@
+:root {
+    --primary-color: #293E49;
+
+    --hover-color: #5B7380;
+
+    --white-color: #ffffff;
+
+    --profile-color: var(--white-color);
+}
 
 html{
     font-family: 'Open Sans',sans-serif;
@@ -18,9 +27,15 @@ hr{
     flex: 15%;
     display: block;
     position: relative;
-    margin: 5% 2% 0 10%;
+    padding: 5% 2% 0 2%;
     width: 100%;
-    height: 100%;
+    margin: 5% 0 30px 5%;
+    background: var(--primary-color);
+    color: var(--profile-color);
+}
+#profile a,
+#profile span {
+    color: var(--profile-color);
 }
 #info-cards{
     flex: 55%;
@@ -33,12 +48,12 @@ hr{
 #image{
     position: relative;
     overflow: hidden;
-}
-#image,#profile-photo{
-    position: center;
-    width: 100%;
-    height: 100%;
     border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px #bbb;
+}
+#profile-photo{
+    width: 100%;
+    height: auto;
 }
 #image > a{
     position: absolute;
@@ -74,16 +89,37 @@ hr{
     font-weight: bolder;
     font-family: 'Open Sans', sans-serif;
 }
+.contact-list {
+    list-style-type: none;
+    padding-left: 0;
+}
 #email{
     font-size: 15px !important;
     font-weight: bold !important;
     font-family: 'Cutive Mono',monospace;
 }
 .contact{
+    padding: 5px;
     font-size: 15px !important;
     font-weight: bold !important;
     font-family: 'Cutive Mono',monospace;
 }
+.contact-element{
+    padding: 5px;
+}
+.contact-email-element{
+    padding: 5px;
+}
+.contact-element:hover {
+    background-color: var(--hover-color);
+  }
+
+
+
+
+
+
+
 #college,#email,#year-graduation,#education,#more-about,#telephone,#fax{
     color: #555;
     font-size: 13.5px;
@@ -108,7 +144,7 @@ strong,span{
 }
 /* Style all font awesome icons */
 .fa {
-    padding: 5px;
+    /* padding: 5px; */
     /* font-size: 30px; */
     /* width: 10px; */
     text-align: center;
@@ -125,6 +161,7 @@ strong,span{
   /* Add a hover effect if you want */
   .fa:hover {
     opacity: 0.7;
+    background-color: var(--hover-color);
   }
   
   /* Set a specific color for each brand */
@@ -135,13 +172,6 @@ strong,span{
     color: white;
   }
   
-  /* Twitter */
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-
-
 .fab{
     font-size: 1.1em;
 }
@@ -240,3 +270,23 @@ strong,span{
         margin-bottom: 30px;
     }
 }
+/* Style buttons */
+.btn {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 3px 7px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: var(--hover-color);
+  }
+
+.button-style{
+    padding: 5px;
+}
+
+

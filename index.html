@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script> -->
-
-    <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <button onclick="generatePDF()">Download PDF</button>
+    <button class="no-print btn" onclick="generatePDF()"><i class="button-style fa fa-download"></i> Download</button>
     <div id="inner-nav"></div>
     <div id="container">
         <div id="profile">
@@ -22,19 +19,20 @@
             <p id="name">Balázs Blaschek</p>
             <p id="designation">Software Architect<br><span id="college">Nexogen, Budapest</span></p>
             <div>
-                <p id="contact" class="tags">Contact</p>
-                <ul>
-                    <li>
-                        <span class='fa fa-envelope-open blue-color'></span>
-                        <i class="contact">domper87@gmail.com</i>
+                <ul class="contact-list">
+                    <li class="contact-email-element">
+                        <div>
+                            <span class='fa fa-envelope-open blue-color'></span>
+                            <i class="contact">domper87@gmail.com</i>
+                        </div>
                     </li>
-                    <li>
+                    <li class="contact-element">
                         <a href="https://www.linkedin.com/in/balazs-blaschek-630b5874">
                             <span class="fa fa-linkedin" aria-hidden="true"></span>
-                            <span class="contact">Linkedin</span>
+                            <i class="contact">Linkedin</i>
                         </a>
                     </li>
-                    <li>
+                    <li class="contact-element">
                         <a href="https://github.com/Dompi">
                             <span class="fa fa-github"></span>
                             <i class="contact">Github</i>
@@ -149,7 +147,7 @@
                                 <ul>
                                     <li>
                                         <span>
-                                            a
+                                            As a Software Architect I designed the new and one of the main product
                                         </span>
                                     </li>
                                     <li>
@@ -446,6 +444,9 @@
             window.print()
         }
     </script>
+    <style type="text/css" media="print">
+        .no-print { display: none; }
+     </style>
 </body>
 
 </html>
