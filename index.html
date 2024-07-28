@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script> -->
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+    <button onclick="generatePDF()">Download PDF</button>
     <div id="inner-nav"></div>
     <div id="container">
         <div id="profile">
             <div id="image">
-                <img id="profile-photo" src="photo.jpeg" alt="Profile-Image">
+                <img id="profile-photo" src="photo.jpg" alt="Profile-Image">
             </div>
             <p id="name">Balázs Blaschek</p>
             <p id="designation">Software Architect<br><span id="college">Nexogen, Budapest</span></p>
@@ -20,18 +25,20 @@
                 <p id="contact" class="tags">Contact</p>
                 <ul>
                     <li>
-                        <p id="email">Email: domper87@gmail.com</p>
+                        <span class='fa fa-envelope-open blue-color'></span>
+                        <i class="contact">domper87@gmail.com</i>
                     </li>
                     <li>
-                        <div>
-                            <p id="social">Social links: </p>
-                            <a href="https://www.linkedin.com/in/balazs-blaschek-630b5874">
-                                <i class="fab fa-linkedin-in stroke-transparent">Linkedin</i>
-                            </a>
-                            <a href="https://github.com/Dompi">
-                                <i class="fab fa-github stroke-transparent">Github</i>
-                            </a>
-                        </div>
+                        <a href="https://www.linkedin.com/in/balazs-blaschek-630b5874">
+                            <span class="fa fa-linkedin" aria-hidden="true"></span>
+                            <span class="contact">Linkedin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Dompi">
+                            <span class="fa fa-github"></span>
+                            <i class="contact">Github</i>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -91,7 +98,7 @@
         </div>
         <div id="info-cards">
             <div class="card">
-                <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Professional Summary</p>
+                <p><i class="fas stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Professional Summary</p>
                 <ul>
                     <li>
                         <p>
@@ -108,30 +115,76 @@
                 </ul>
             </div>
             <div class="card">
-                <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Work Experience</p>
+                <p><i class="fas stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Work Experience</p>
                 <ul>
                     <li>
                         <p class="tags">NEXOGEN <br>
                             <span>Software Architect <br></span>
                             <span>June 2021 - Present <br></span>
                             <span>Budapest, Hungary</span>
-                            <ul>
-                                <li>
-                                    <span></span>
-                                </li>
-                                <li>
-                                    <span></span>
-                                    <ul>
-                                        <li>
-                                            <span></span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-
-
-
-
+                        <ul>
+                            <li>
+                                <span class="head">Description</span>
+                                <ul>
+                                    <li>
+                                        <span>
+                                            As a Software Architect, I was responsible to designe the architectures and
+                                            data models for the new products of the company.
+                                            I had to help the teams to develop the features. In the meanwhile I had the
+                                            opportunity to get familiar with and
+                                            implementing modern cutting edge technologies in the company.
+                                            I moved the developmetn process from the old fashioned silo way,
+                                            to a modern spotify method based modern feature team based system.
+                                            I designed and implemented the Company Development Guidelines, processes and
+                                            workflows.
+                                            I helped the teams in many ways, technical advices, planning internal
+                                            trainings,
+                                            expanding professional knowledge base, interviews and so on.
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="head">Projects</span>
+                                <ul>
+                                    <li>
+                                        <span>
+                                            a
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            a 
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="head">Backend Development</span>
+                                <ul>
+                                    <li>
+                                        <span>.Net Core, .Net6</span>
+                                    </li>
+                                    <li>
+                                        <span>AzureSQL, Postgre, Blob, Table, Entity Framework</span>
+                                    </li>
+                                    <li>
+                                        <span>Rabbit, Rest</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="head">DevOps</span>
+                                <ul>
+                                    <li>
+                                        <span>Docker, Kubernetes, Terraform</span>
+                                    </li>
+                                    <li>
+                                        <span>Octopus, AzureDevops</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                         </p>
                     </li>
                     <li>
@@ -139,65 +192,74 @@
                             <span>Senior Software Engineer <br></span>
                             <span>January 2019 - June 2021 (2 years 6 months)<br></span>
                             <span>Budapest, Hungary</span>
-                            <ul>
-                                <li>
-                                    <span>
-                                        A big multinational company working in the online gambling industry.
-                                        I was a Senior Developer and developed the company self developed software, which
-                                        was a multi tenant, distributed system.
-                                        My team was responsible for customer handling (registration, login, integration with
-                                        goverments).
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>Projects:</span>
-                                    <ul>
-                                        <li>
-                                            <span>Knowledge transfer from another team to our. We moved the whole customer handling part from Sweeden to Hungary</span>
-                                        </li>
-                                        <li>
-                                            <span>Adding new sites, in different countries, for the base software.</span>
-                                        </li>
-                                        <li>
-                                            <span>Refactoring a lot of different technical depts. Actually I developed a self developed software to be able to handle, and remove, nuget hell.</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span>Backend Development:</span>
-                                    <ul>
-                                        <li>
-                                            <span>Languages: C#, and small development in F#</span>
-                                        </li>
-                                        <li>
-                                            <span>Microsoft technologies: from ASP .Net 4.0 - .NET core 3.1</span>
-                                        </li>
-                                        <li>
-                                            <span>ORM / OM: Dapper</span>
-                                        </li>
-                                        <li>
-                                            <span>Messaging technologies: NSB, Rabbit, Kafka</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span>CI/CD systems:</span>
-                                    <ul>
-                                        <li>
-                                            <span>Build: Team City</span>
-                                        </li>
-                                        <li>
-                                            <span>Orchestration systems: Octopus</span>
-                                        </li>
-                                        <li>
-                                            <span>Containerization: Docker</span>
-                                        </li>
-                                        <li>
-                                            <span>Deployment / Scaling: K8S and Nomad</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <ul>
+                            <li>
+                                <span class="head">Description</span>
+                                <ul>
+                                    <li>
+                                        <span>
+                                            A big multinational company working in the online gambling industry.
+                                            I was a Senior Developer and developed the company self developed software,
+                                            which
+                                            was a multi tenant, distributed system.
+                                            My team was responsible for customer handling (registration, login,
+                                            integration with
+                                            goverments).
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="head">Projects</span>
+                                <ul>
+                                    <li>
+                                        <span>Knowledge transfer from another team to our. We moved the whole customer
+                                            handling part from Sweeden to Hungary</span>
+                                    </li>
+                                    <li>
+                                        <span>Adding new sites, in different countries, for the base software.</span>
+                                    </li>
+                                    <li>
+                                        <span>Refactoring a lot of different technical depts. Actually I developed a
+                                            self developed software to be able to handle, and remove, nuget hell.</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="head">Backend Development</span>
+                                <ul>
+                                    <li>
+                                        <span>Languages: C#, and small development in F#</span>
+                                    </li>
+                                    <li>
+                                        <span>Microsoft technologies: from ASP .Net 4.0 - .NET core 3.1</span>
+                                    </li>
+                                    <li>
+                                        <span>ORM / OM: Dapper</span>
+                                    </li>
+                                    <li>
+                                        <span>Messaging technologies: NSB, Rabbit, Kafka</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="head">DevOps</span>
+                                <ul>
+                                    <li>
+                                        <span>Build: Team City</span>
+                                    </li>
+                                    <li>
+                                        <span>Orchestration systems: Octopus</span>
+                                    </li>
+                                    <li>
+                                        <span>Containerization: Docker</span>
+                                    </li>
+                                    <li>
+                                        <span>Deployment / Scaling: K8S and Nomad</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                         </p>
                     </li>
                     <li>
@@ -207,11 +269,19 @@
                             <span>Budapest, Hungary</span>
                         <ul>
                             <li>
-                                <span>I worked as a Developer in a Scrum team, where we developed a lot of different
-                                    small and 1-2 big features in the company self developed software.</span>
+                                <span class="head">Description</span>
+                                <ul>
+                                    <li>
+                                        <span>
+                                            I worked as a Developer in a Scrum team,
+                                            where we developed a lot of different small and 1-2 big features in the
+                                            company self developed software.
+                                        </span>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
-                                <span>Small features:</span>
+                                <span class="head">Small features</span>
                                 <ul>
                                     <li>
                                         <span>The software was a big monolith, with almost all the technologies from the
@@ -225,7 +295,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <span>Big Project:</span>
+                                <span class="head">Big Project</span>
                                 <ul>
                                     <li>
                                         <span>We had to change the builds (Microsoft not supported XAML builds anymore),
@@ -236,7 +306,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <span>Backend Development:</span>
+                                <span class="head">Backend Development</span>
                                 <ul>
                                     <li>
                                         <span>Languages: C#, and small development in C++</span>
@@ -246,7 +316,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <span>Frontend development:</span>
+                                <span class="head">Frontend development</span>
                                 <ul>
                                     <li>
                                         <span>Small developments in different JS frameworks like Angular and React, and
@@ -264,13 +334,22 @@
                             <span>Budapest, Hungary</span>
                         <ul>
                             <li>
-                                <span>Development of a digital magazine editor, a customer registration system, a
-                                    warehouse management system and an agricultural webshop.</span>
+                                <span class="head">Description</span>
                             </li>
-                            <li>
-                                <span>Applied Technologies: WPF, WCF, WPF, EF, ASP.NET MVC / Web API, MSSQL, Oracle db,
-                                    NopCommerce, Azure, TFS, CI, JS</span>
-                            </li>
+                            <ul>
+                                <li>
+                                    <span>
+                                        Development of a digital magazine editor, a customer registration system, a
+                                        warehouse management system and an agricultural webshop.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Applied Technologies: WPF, WCF, WPF, EF, ASP.NET MVC / Web API, MSSQL, Oracle
+                                        db, NopCommerce, Azure, TFS, CI, JS
+                                    </span>
+                                </li>
+                            </ul>
                         </ul>
                         </p>
                     </li>
@@ -281,9 +360,16 @@
                             <span>Budapest, Hungary</span>
                         <ul>
                             <li>
-                                <span>Teaching .Net development in BME, leading laboratories and creating excipients to
-                                    the them.</span>
+                                <span class="head">Description</span>
                             </li>
+                            <ul>
+                                <li>
+                                    <span>
+                                        Teaching .Net development in BME, leading laboratories and creating excipients
+                                        to the them.
+                                    </span>
+                                </li>
+                            </ul>
                         </ul>
                         </p>
                     </li>
@@ -294,9 +380,15 @@
                             <span>Budapest, Hungary</span>
                         <ul>
                             <li>
-                                <span>Development of a cross-platform mobile application in Unity, in C#
-                                    language.</span>
+                                <span class="head">Description</span>
                             </li>
+                            <ul>
+                                <li>
+                                    <span>
+                                        Development of a cross-platform mobile application in Unity, in C# language.
+                                    </span>
+                                </li>
+                            </ul>
                         </ul>
                         </p>
                     </li>
@@ -307,20 +399,29 @@
                             <span>Budapest, Hungary</span>
                         <ul>
                             <li>
-                                <span>1 year: Development of a cross-platform mobile application in Unitiy in C#
-                                    language.</span>
+                                <span class="head">Description</span>
                             </li>
-                            <li>
-                                <span>1.5 year: Worked as a contractor at Amdocs. We changed the billing system of
-                                    Magyar Telekom. I was an on site tester.</span>
-                            </li>
+                            <ul>
+                                <li>
+                                    <span>
+                                        1 year: Development of a cross-platform mobile application in Unitiy in C#
+                                        language.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        1.5 year: Worked as a contractor at Amdocs. We changed the billing system of
+                                        Magyar Telekom. I was an on site tester.
+                                    </span>
+                                </li>
+                            </ul>
                         </ul>
                         </p>
                     </li>
                 </ul>
             </div>
             <div class="card">
-                <p><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Education</p>
+                <p><i class="fas stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Education</p>
                 <ul>
                     <li>
                         <p class="tags">Budapest University of Technology and Economics <br>
@@ -340,6 +441,11 @@
             </div>
         </div>
     </div>
+    <script>
+        function generatePDF() {
+            window.print()
+        }
+    </script>
 </body>
 
 </html>

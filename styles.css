@@ -35,9 +35,9 @@ hr{
     overflow: hidden;
 }
 #image,#profile-photo{
-    position: relative;
-    width: 80px;
-    height: 80px;
+    position: center;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
 }
 #image > a{
@@ -79,7 +79,7 @@ hr{
     font-weight: bold !important;
     font-family: 'Cutive Mono',monospace;
 }
-#email{
+.contact{
     font-size: 15px !important;
     font-weight: bold !important;
     font-family: 'Cutive Mono',monospace;
@@ -106,6 +106,42 @@ strong,span{
     color:#097bbf;
     font-family: 'Nunito', sans-serif;
 }
+/* Style all font awesome icons */
+.fa {
+    padding: 5px;
+    /* font-size: 30px; */
+    /* width: 10px; */
+    text-align: center;
+    text-decoration: none;
+  }
+  /* .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  } */
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Linkedin */
+  .fa-linkedin {
+    background: #0A66C2;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+
 .fab{
     font-size: 1.1em;
 }
@@ -167,6 +203,10 @@ strong,span{
 }
 .card > ul{
     list-style-type: none;
+}
+.head{
+    font-size: 15px;
+    font-weight: bolder;
 }
 .tags{
     font-size: 17px;
