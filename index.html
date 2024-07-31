@@ -15,35 +15,40 @@
     <div id="inner-nav"></div>
     <div id="container">
         <div id="profile">
-            <div id="image">
-                <img id="profile-photo" src="photo.jpg" alt="Profile-Image">
+            <div id="profile-details">
+                <div id="image">
+                    <img id="profile-photo" src="photo.jpg" alt="Profile-Image">
+                </div>
+                <div id="contact-details">
+                    <p id="name">Balázs Blaschek</p>
+                    <p id="designation">Software Architect<br><span id="college">Nexogen, Budapest</span></p>
+                    <div>
+                        <ul class="contact-list">
+                            <li class="contact-email-element">
+                                <div>
+                                    <span class='fa fa-envelope-open blue-color'></span>
+                                    <i class="contact">domper87@gmail.com</i>
+                                </div>
+                            </li>
+                            <li class="contact-element">
+                                <a href="https://www.linkedin.com/in/balazs-blaschek-630b5874">
+                                    <span class="fa fa-linkedin" aria-hidden="true"></span>
+                                    <i class="contact">Linkedin</i>
+                                </a>
+                            </li>
+                            <li class="contact-element">
+                                <a href="https://github.com/Dompi">
+                                    <span class="fa fa-github"></span>
+                                    <i class="contact">Github</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end contact details -->
             </div>
-            <p id="name">Balázs Blaschek</p>
-            <p id="designation">Software Architect<br><span id="college">Nexogen, Budapest</span></p>
-            <div>
-                <ul class="contact-list">
-                    <li class="contact-email-element">
-                        <div>
-                            <span class='fa fa-envelope-open blue-color'></span>
-                            <i class="contact">domper87@gmail.com</i>
-                        </div>
-                    </li>
-                    <li class="contact-element">
-                        <a href="https://www.linkedin.com/in/balazs-blaschek-630b5874">
-                            <span class="fa fa-linkedin" aria-hidden="true"></span>
-                            <i class="contact">Linkedin</i>
-                        </a>
-                    </li>
-                    <li class="contact-element">
-                        <a href="https://github.com/Dompi">
-                            <span class="fa fa-github"></span>
-                            <i class="contact">Github</i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <hr width="100%">
-            <div id="top-skills-div">
+            <div id="profile-description">
+                <hr width="100%">
+                <div id="top-skills-div">
                 <p id="top-skills" class="tags">Top Skills<br /></p>
                 <ul>
                     <li>
@@ -94,8 +99,9 @@
                     </li>
                 </ul>
             </div>
+            </div> <!-- end profile description -->
+        </div> <!-- end profile -->
 
-        </div>
         <div id="info-cards">
             <div class="card">
                 <p><i class="fas stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Professional Summary</p>
@@ -432,8 +438,8 @@
                     </li>
                 </ul>
             </div>
-        </div>
-    </div>
+        </div> <!-- end info-cards -->
+    </div> <!-- end container -->
     <script>
         function generatePDF() {
             window.print()

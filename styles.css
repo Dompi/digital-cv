@@ -8,6 +8,7 @@
 :root {
     --primary-color: #293E49;
     --white-color: #ffffff;
+    --black-color: #000000;
 
     --profile-color: var(--white-color);
 
