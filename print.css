@@ -1,3 +1,6 @@
-@media print {
+@import url("style.css");
 
+@media print {
+    /* Print button */
+    .no-print { display: none; }
 }
