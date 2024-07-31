@@ -266,8 +266,8 @@ strong,span{
     outline: none;
     cursor: pointer;
 }
-.card > ul{
-    list-style-type: none;
+.card .workplace {
+    padding-left: 3em;
 }
 .head{
     font-size: 15px;
