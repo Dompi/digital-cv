@@ -1,0 +1,43 @@
+@import url("style.css");
+
+:root {
+    --print-font-color: var(--black-color);
+}
+
+@media print {
+    /* ----- GENERAL ------ */
+    /* Print button */
+    .no-print { display: none; }
+
+    #container {
+        display: block;
+    }
+
+    #profile {
+        margin-bottom: 30px;
+        padding: 3em;
+        width: auto;
+        box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+        overflow-x: hidden;
+        background-color: var(--white-color);
+        color: var(--print-font-color);
+    }
+    #profile-details {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    #profile a,
+    #profile span {
+        color: var(--print-font-color);
+    }
+
+    #image {
+        padding: 0 2em 2em 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    #profile-photo {
+        object-fit: contain;
+    }
+}
