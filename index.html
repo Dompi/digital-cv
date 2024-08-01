@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="print.css" media="print" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -13,35 +15,40 @@
     <div id="inner-nav"></div>
     <div id="container">
         <div id="profile">
-            <div id="image">
-                <img id="profile-photo" src="photo.jpg" alt="Profile-Image">
+            <div id="profile-details">
+                <div id="image">
+                    <img id="profile-photo" src="photo.jpg" alt="Profile-Image">
+                </div>
+                <div id="contact-details">
+                    <p id="name">Balázs Blaschek</p>
+                    <p id="designation">Software Architect<br><span id="college">Nexogen, Budapest</span></p>
+                    <div>
+                        <ul class="contact-list">
+                            <li class="contact-email-element">
+                                <div>
+                                    <span class='fa fa-envelope-open blue-color'></span>
+                                    <i class="contact">domper87@gmail.com</i>
+                                </div>
+                            </li>
+                            <li class="contact-element">
+                                <a href="https://www.linkedin.com/in/balazs-blaschek-630b5874">
+                                    <span class="fa fa-linkedin" aria-hidden="true"></span>
+                                    <i class="contact">Linkedin</i>
+                                </a>
+                            </li>
+                            <li class="contact-element">
+                                <a href="https://github.com/Dompi">
+                                    <span class="fa fa-github"></span>
+                                    <i class="contact">Github</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end contact details -->
             </div>
-            <p id="name">Balázs Blaschek</p>
-            <p id="designation">Software Architect<br><span id="college">Nexogen, Budapest</span></p>
-            <div>
-                <ul class="contact-list">
-                    <li class="contact-email-element">
-                        <div>
-                            <span class='fa fa-envelope-open blue-color'></span>
-                            <i class="contact">domper87@gmail.com</i>
-                        </div>
-                    </li>
-                    <li class="contact-element">
-                        <a href="https://www.linkedin.com/in/balazs-blaschek-630b5874">
-                            <span class="fa fa-linkedin" aria-hidden="true"></span>
-                            <i class="contact">Linkedin</i>
-                        </a>
-                    </li>
-                    <li class="contact-element">
-                        <a href="https://github.com/Dompi">
-                            <span class="fa fa-github"></span>
-                            <i class="contact">Github</i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <hr width="100%">
-            <div id="top-skills-div">
+            <div id="profile-description">
+                <hr width="100%">
+                <div id="top-skills-div">
                 <p id="top-skills" class="tags">Top Skills<br /></p>
                 <ul>
                     <li>
@@ -92,17 +99,18 @@
                     </li>
                 </ul>
             </div>
+            </div> <!-- end profile description -->
+        </div> <!-- end profile -->
 
-        </div>
         <div id="info-cards">
             <div class="card">
                 <p><i class="fas stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Professional Summary</p>
                 <ul>
                     <li>
                         <p>
-                            Highly skilled Software Architect with extensive experience in designing and implementing robust distributed software architectures. 
-                            Proven track record in developing comprehensive company development guidelines, processes, and software. 
-                            Adept in backend development and operations, with specialized expertise in C#, .NET, and ASP.NET Core. 
+                            Highly skilled Software Architect with extensive experience in designing and implementing robust distributed software architectures.
+                            Proven track record in developing comprehensive company development guidelines, processes, and software.
+                            Adept in backend development and operations, with specialized expertise in C#, .NET, and ASP.NET Core.
                             Experienced in containerization technologies, Kubernetes (K8S), and Azure cloud solutions, consistently delivering high-quality, scalable, and efficient software solutions.
                         </p>
                     </li>
@@ -110,8 +118,7 @@
             </div>
             <div class="card">
                 <p><i class="fas stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Work Experience</p>
-                <ul>
-                    <li>
+                    <div class="workplace">
                         <p class="tags">NEXOGEN <br>
                             <span>Software Architect <br></span>
                             <span>June 2021 - Present <br></span>
@@ -122,11 +129,11 @@
                                 <ul>
                                     <li>
                                         <span>
-                                            As a Software Architect, I was responsible for designing the architectures and data models for the company's new products. 
-                                            I assisted the teams in developing the features. 
-                                            Meanwhile, I had the opportunity to familiarize myself with and implement cutting-edge technologies in the company. 
-                                            I transitioned the development process from the old-fashioned silo approach to a modern Spotify method-based, feature team-based system. 
-                                            I designed and implemented the Company Development Guidelines, processes, and workflows. 
+                                            As a Software Architect, I was responsible for designing the architectures and data models for the company's new products.
+                                            I assisted the teams in developing the features.
+                                            Meanwhile, I had the opportunity to familiarize myself with and implement cutting-edge technologies in the company.
+                                            I transitioned the development process from the old-fashioned silo approach to a modern Spotify method-based, feature team-based system.
+                                            I designed and implemented the Company Development Guidelines, processes, and workflows.
                                             I supported the teams in various ways, including providing technical advice, planning internal trainings, expanding the professional knowledge base, conducting interviews, and more.
                                         </span>
                                     </li>
@@ -137,15 +144,15 @@
                                 <ul>
                                     <li>
                                         <span>
-                                            New Product Development: 
-                                            As a Software Architect, I designed the architecture for one of the company's main products and led a team that implemented it over the last three years. 
+                                            New Product Development:
+                                            As a Software Architect, I designed the architecture for one of the company's main products and led a team that implemented it over the last three years.
                                             After that, I participated in the design of the latest product.
                                         </span>
                                         <br/>
                                         <span>
-                                            I believe the main challenges were based on two factors: the business needs and the team’s capabilities. 
-                                            The system works with large amounts of telematic data, which we had to process in many different ways in near real time. 
-                                            Additionally, we had to deliver the main functionality in a very short period of time (around 8 months) with a small team. 
+                                            I believe the main challenges were based on two factors: the business needs and the team’s capabilities.
+                                            The system works with large amounts of telematic data, which we had to process in many different ways in near real time.
+                                            Additionally, we had to deliver the main functionality in a very short period of time (around 8 months) with a small team.
                                             Therefore, when designing the architecture, I had to consider the knowledge and limits of the team and decide which technologies to use.
                                         </span>
                                     </li>
@@ -178,8 +185,8 @@
                             </li>
                         </ul>
                         </p>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="workplace">
                         <p class="tags">Betsson Group <br>
                             <span>Senior Software Engineer <br></span>
                             <span>January 2019 - June 2021 (2 years 6 months)<br></span>
@@ -253,8 +260,8 @@
                             </li>
                         </ul>
                         </p>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="workplace">
                         <p class="tags">Dealogic <br>
                             <span>Software Engineer <br></span>
                             <span>April 2017 - January 2019 (1 year 10 months)<br></span>
@@ -288,9 +295,9 @@
                                 <span class="head">Big Project</span>
                                 <ul>
                                     <li>
-                                        <span>                                            
-                                            We had to change the builds as Microsoft no longer supported XAML builds. 
-                                            For this reason, we sliced the large monolith into microservices. 
+                                        <span>
+                                            We had to change the builds as Microsoft no longer supported XAML builds.
+                                            For this reason, we sliced the large monolith into microservices.
                                             My team worked on figuring out the new CI/CD system and how to start slicing the monolith into smaller deployable services.
                                         </span>
                                     </li>
@@ -317,8 +324,8 @@
                             </li>
                         </ul>
                         </p>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="workplace">
                         <p class="tags">AutSoft Kft. <br>
                             <span>Developer <br></span>
                             <span>June 2014 - December 2016 (2 years 7 months)<br></span>
@@ -343,8 +350,8 @@
                             </ul>
                         </ul>
                         </p>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="workplace">
                         <p class="tags">Budapest University of Technology and Economics <br>
                             <span>Course Instructor <br></span>
                             <span>September 2014 - June 2015 (10 months)<br></span>
@@ -363,8 +370,8 @@
                             </ul>
                         </ul>
                         </p>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="workplace">
                         <p class="tags">Nomel <br>
                             <span>Developer <br></span>
                             <span>October 2013 - May 2014 (8 months)<br></span>
@@ -382,8 +389,8 @@
                             </ul>
                         </ul>
                         </p>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="workplace">
                         <p class="tags">Telcotrend Consulting <br>
                             <span>Developer <br></span>
                             <span>June 2011 - October 2013 (2 years 5 months)<br></span>
@@ -408,7 +415,7 @@
                             </ul>
                         </ul>
                         </p>
-                    </li>
+                    </div>
                 </ul>
             </div>
             <div class="card">
@@ -430,16 +437,12 @@
                     </li>
                 </ul>
             </div>
-        </div>
-    </div>
+        </div> <!-- end info-cards -->
+    </div> <!-- end container -->
     <script>
         function generatePDF() {
             window.print()
         }
     </script>
-    <style type="text/css" media="print">
-        .no-print { display: none; }
-     </style>
 </body>
-
 </html>
